@@ -4,7 +4,7 @@ Este proyecto es un pipeline de datos *End-to-End* diseñado para extraer, trans
 
 ## 🏗️ Arquitectura de Datos
 
-1. **Ingesta Manual:** Uso de Atajos (Shortcuts) de iOS para registrar transacciones de forma ágil en Notion.
+1. **Ingesta Manual (iOS Shortcuts):** Creación de un flujo personalizado en el iPhone para hacer peticiones HTTP (POST) a la API de Notion. ([Leer más sobre la ingesta aquí](./docs/ios_shortcuts.md)).
 2. **Extracción (API REST):** Script en Python que consulta la API de Notion.
 3. **Data Warehouse (Snowflake):** Almacenamiento optimizado de los datos extraídos.
 4. **Orquestación (Airflow):** Tareas programadas diariamente para mantener los datos actualizados.
@@ -35,3 +35,4 @@ Para replicar este proyecto sin exponer credenciales, este repositorio utiliza v
 ## 🚀 Estructura de Ejecución
 - **`scripts/extract_load.py`**: Contiene la lógica central de extracción (Notion API) y carga (Snowflake).
 - **`dags/notion_to_snowflake_dag.py`**: Es el archivo DAG de Airflow que orquesta e invoca la ejecución del script diariamente.
+- **`docs/ios_shortcuts.md`**: Explicación del diseño del sistema de ingesta de datos desde dispositivos móviles.
