@@ -1,0 +1,6 @@
+# Ignorar el archivo de variables de entorno reales
+.env
+
+# Ignorar caché de Python
+__pycache__/
+*.pyc
